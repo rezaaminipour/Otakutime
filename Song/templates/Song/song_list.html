@@ -1,0 +1,78 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+<!-- our -->
+<div id="games" class="our">
+  <div class="container">
+      
+
+
+    
+      
+          
+    
+      
+  <div class="container-fluid">
+     <div class="row">                    
+       <div class="logo">
+          <div class="col-md-8">
+              <div class="titlepage">
+                  <li class="button_login"> <a href="{% url 'SONG_PAGE:create' %}">Upload your Song</a> </li><br>
+              </div>
+            </div>
+       </div> 
+      </div>  
+  </div> 
+ 
+
+
+
+
+      <div class="col-lg-3 col-md-6 col-sm-6 ">
+        <div class="address">
+           <h1>Songs</h1>
+        </div>
+      </div>
+
+
+      <div class="row">
+        
+        {% if songs %}
+        {% for song in songs %}
+          <div class="col-md-12 margin_bottom">
+              <div class="row">
+
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                      <div class="two-box">
+                          <img src={{song.image.url}} alt="#" width=100% height=100%/>
+                      </div>
+                  </div>
+
+                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                      <div class="Games">
+                          <h3>{{song.title}}</h3><br>
+                          <a href="{% url 'SONG_PAGE:detail' slug=song.slug %}">Go to Page</a>
+                          <p>{{song.snippet}}</p>
+                          <audio controls>
+                            <source src="{{song.song.url}}" type="audio/mp3">
+                            
+                        </audio>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+
+          {% else %}
+          <h1>No Songs yet</h1>
+          {% endif %}
+
+          
+
+      </div>
+  </div>
+</div>
+
+{% endblock %}

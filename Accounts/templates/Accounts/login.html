@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+{% load static %}
+{% load widget_tweaks %}
+
+
+{%block content%}
+
+
+    <!-- Login -->
+    <div id="contact" class="contact">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <form class="contact_bg" action="{% url 'accounts:login' %}" method="post">
+                        <div class="row">
+                            
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                {{form.username}}
+                               
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                {{form.password}}
+                               
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <button class="send">Login</button>
+                            </div>
+                            {% csrf_token %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+    <!-- end login -->
+</html>
+
+{% endblock %}

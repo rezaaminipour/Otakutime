@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div id="contact" class="contact">
+    <div class="container">
+
+        <div class="row">
+                <h1>upload your song</h1>
+            <div class="col-md-12">
+
+                <form class="contact_bg" action="{% url 'SONG_PAGE:create' %}" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                            
+
+
+                        <div >
+                        <label for="id_title"></label><input type="text" name="title" placeholder="Title" class="col-xl-6 col-lg-6 col-md-6 col-sm-12" required="" id="id_title">
+                   <br> <label for="id_body"></label><input type="text" name="body" placeholder="About..." class="col-x1-6 col-lg-6 col-md-6 col-sm-12" required="" id="id_body"><br>
+                   <br> <label for="id_song">Song:</label><input type="file" name="song" required="" id="id_song">
+                        <label for="id_image">Image:</label><input type="file" name="image" accept="image/*" id="id_image">                      
+                        </div>
+                            {% csrf_token %}
+                         
+                            <button class="send">Upload</button>
+                        </div>
+                        {% csrf_token %}
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
+
+
+

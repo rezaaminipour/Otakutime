@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+{%block content%}
+
+
+ <!-- about  -->
+ <div id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>{{wallpaper.title}}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="about-box">
+                    <figure>
+                        {% if wallpaper.wallpaper %}
+                        <img width="1280" height="720" controls="controls">       
+                         <source src="{{wallpaper.wallpaper.url}}#t=10"> 
+                    </img>  
+                        {% endif %}
+                    </figure>
+
+                    <p>{{wallpaper.body}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+
+

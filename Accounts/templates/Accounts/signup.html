@@ -1,0 +1,49 @@
+{%extends 'base.html'%}
+{% load static %}
+{% load widget_tweaks %}
+
+{%block content%}
+
+
+    <!-- signup -->
+    <div id="contact" class="contact">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <form class="contact_bg" action="{% url 'accounts:signup' %}" method="post">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                {{form.email}}
+                                
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                               
+                                {{form.password1}}
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                
+                                {{form.password2}}
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                
+                                {{form.username}}
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <button class="send">Register</button>
+                            </div>
+                            {% csrf_token %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+    <!-- end signup -->
+</html>
+
+{% endblock %}

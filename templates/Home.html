@@ -1,0 +1,221 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+
+    <!-- our -->
+    <div id="games" class="our">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>Videos</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 margin_bottom">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="{% static 'images/our-image1.jpg' %}" alt="#" width=100% height=100%/></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>My hero Academia</h3>
+                                <p>bal hajskdlasdkla sdl kasldk  kdslak dlasopd masoihd iasm dao sdko amsdo , odsa </p>
+                                <a href="#">Free Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 margin_bottom">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="{% static 'images/our-image2.jpg' %}" alt="#" width=100% height=100%/></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>Sanke</h3>
+                                <p>asdikj asod imasoi dmsi dmo maspod ,pasof,apso fnaps nfpas f </p>
+                                <a href="#">Free Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="two-box">
+                                <figure><img src="{% static 'images/our-image3.jpg' %}" alt="#" width=100% height=100%/></figure>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+
+                            <div class="Games">
+                                <h3>random</h3>
+                                <p>kasujhd aos mdoasi mdopa smdp ioampsd o dsoa pdoasn dopas d </p>
+                                <a href="#">Free Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <!-- end our -->
+    <!-- We are -->
+    <div id="software" class="We_are">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>otaku
+
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                     <div class="box_bg">
+                         <div class="box_bg_img">
+                             <figure><img src="{% static 'images/soft.jpg' %}"width=100% height=100%></figure>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 border_right">
+                     <div class="box_text">
+                         <p> asldkm laskjfpsa mflkas foais mfomoimomomoiamsffpoa,spfo,asl.fpa;sopfaosnnfsinfoasi   iansfonasfian  i fanso nfoa insfo </p>
+                         <a href="#">Read more</a>
+                     </div>
+                 </div> 
+            </div>
+        </div>
+    </div>
+    <!-- end We are -->
+
+    <!-- about  -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>About Our Site</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about-box">
+                        <figure><img src="{% static 'images/about.jpg' %}" alt="#" /></figure>
+
+                        <p> asdasijfopaisjf  ji jo ifjasoi fjaso ijfoi as
+                            <br> asofno iun ub iubiasubfiuas  fausifbais basuif baisf bi</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- end abouts -->
+
+    <!-- testimonial -->
+    <div id="testimonial" class="testimonial">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="titlepage">
+                        <h2>wallpapers</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <a href="{% url 'WALLPAPER_PAGE:wallpaper_page' %}"></a>
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 offset-md-2">
+                    <div class="row box">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="{% static 'images/test1.png' %}" alt="#" width=100% height=100%/></figure>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="{% static 'images/test2.png' %}" alt="#" width=100% height=100%/></figure>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                            <div class="testimonial_box">
+                                <figure><img src="{% static 'images/test3.png' %}" alt="#" width=100% height=100%/></figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clients_box">
+                        <h3>Jecoo</h3>
+                        <p>asfsd fsd sd fsdfdh fgh th rt fdrt nd jn djyd
+                            <br> djdfgjhdh df jdfgj dfghsf sh sh sgh 
+                            <br>shs bnsb s s hjkgy hshbs</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- end testimonial -->
+
+    <!-- contact -->
+    <div id="contact" class="contact">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                    <form class="contact_bg">
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <input class="contactus" placeholder="Name" type="text" name="Name">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="contactus" placeholder="Phone" type="text" name="Email">
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                <input class="contactus" placeholder="Email" type="text" name="Email">
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <button class="send">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</html>
+{% endblock %}
+
+
+
+
+

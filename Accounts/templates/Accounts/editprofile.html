@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Edit Profile</h1>
+<form class="site-form" action="{% url 'accounts:editprofile' %}" method="post" enctype="multipart/form-data">
+                            Email:{{form.email}}
+                            Username:{{form.username}}
+                            first name:{{form.first_name}}
+                            last name:{{form.last_name}}
+                            
+                            profile image:{{form.profile_image}}
+                            background image:{{form.background_image}}
+                            date of birth:<input type="date" value="{{form.date_of_birth}}">
+    {% csrf_token %}
+    <input type="submit" value="Save">
+
+</form>
+{% endblock %}

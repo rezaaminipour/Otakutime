@@ -1,0 +1,46 @@
+{%extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+<!-- our -->
+<div id="games" class="our">
+  <div class="container">
+    <div class="container-fluid">
+      <div class="row">                    
+        <div class="logo">
+           <div class="col-md-8">
+               <div class="titlepage">
+                   <li class="button_login"> <a href="{% url 'WALLPAPER_PAGE:create' %}">Upload your Wallpaper</a> </li><br>
+               </div>
+             </div>
+        </div> 
+       </div>  
+   </div> 
+
+      <div class="row">
+        {% if wallpapers %}
+        {% for wallpaper in wallpapers %}
+        <div class="gallery">
+          <a target="_blank" href="#">
+            <img src="{{wallpaper.wallpaper.url}}" alt="Cinque Terre" width=100% height=100%>
+          </a>
+          <div class="desc">{{wallpaper.title}}</div>
+        </div>
+          {% endfor %}
+
+          {% else %}
+          <h1>No Wallpapers yet</h1>
+          {% endif %}
+
+
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
